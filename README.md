@@ -2,22 +2,24 @@
 
 ### Technologies
 
-  - [Yarn](https://yarnpkg.com/) (v1 or newer)
-  - [Git](https://git-scm.com/)
-  - [React Native](https://reactnative.dev)
-  <!-- - [React Navigation](https://reactnavigation.org/) -->
+- [Yarn](https://yarnpkg.com/) (v1 or newer)
+- [Git](https://git-scm.com/)
+- [React Native](https://reactnative.dev)
+- [React Navigation](https://reactnavigation.org/)
 
-<!-- ## Screens Previews
+## Screens Previews
 
 <table style="border: 0">
   <tr>
-    <td align="center"><img src="files/list.jpeg" /></td>
-    <td align="center"><img src="files/empty list.jpeg" /></td>
-    <td align="center"><img src="files/new report.jpeg" /></td>
-    <td align="center"><img src="files/error.jpeg" /></td>
-    <td align="center"><img src="files/success.jpeg" /></td>
+    <td align="center">  
+    <video width="640" height="480" controls>
+      <source src="files/review.mov" type="video/mp4">
+      your browser can reproduce this video
+    </video>
+  </td>
+
   </tr>
-</table> -->
+</table>
 
 ## Getting Started
 
@@ -31,7 +33,7 @@ To get a local copy of this project up and running, follow the steps below.
   - [Yarn](https://yarnpkg.com/) (v1 or newer)
   - [Git](https://git-scm.com/)
   - [React Native](https://reactnative.dev)
-  <!-- - [React Navigation](https://reactnavigation.org/) -->
+  - [React Navigation](https://reactnavigation.org/)
 
 ### Steps
 
@@ -42,7 +44,7 @@ To get a local copy of this project up and running, follow the steps below.
 - Install the dependencies:
   `yarn install` or `npm install`
 - if u dont haved, please install expo:
-    `yarn add expo -g` or `npm install expo -g`
+  `yarn add expo -g` or `npm install expo -g`
 - Run the app on Android:
   `yarn android` or `npm run android`
 - Run the app on iOS
@@ -51,6 +53,7 @@ To get a local copy of this project up and running, follow the steps below.
 ### Project Structure
 
 From src:
+
 - assets/: all the resources has been used in the app, like images, icon or fonts.
 - components/: reusable components used across different screens.
 - navigation/: the app's navigation components and configuration.
