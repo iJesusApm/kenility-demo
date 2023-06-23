@@ -1,0 +1,6 @@
+export const SCREENS_ROUTES = {
+  HOME: 'HOME',
+  CONTACT: 'CONTACT',
+  SCREEN_ONE: 'SCREEN_ONE',
+  SCREEN_TWO: 'SCREEN_TWO',
+}
