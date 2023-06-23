@@ -11,13 +11,7 @@
 
 <table style="border: 0">
   <tr>
-    <td align="center">  
-    <video width="640" height="480" controls>
-      <source src="files/review.mov" type="video/mp4">
-      your browser can reproduce this video
-    </video>
-  </td>
-
+    <td align="center"><img src="files/review.gif" /></td>
   </tr>
 </table>
 
