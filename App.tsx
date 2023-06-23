@@ -1,10 +1,16 @@
 import 'react-native-gesture-handler'
 
 import React from 'react'
-import Navigator from './src/navigation/navigator/Root'
+
+import AppNavigator from './src/navigation/navigator/AppNavigator'
+import {DrawerProvider} from './src/context/DrawerContext'
 
 const App = () => {
-  return <Navigator />
+  return (
+    <DrawerProvider>
+      <AppNavigator />
+    </DrawerProvider>
+  )
 }
 
 export default App
