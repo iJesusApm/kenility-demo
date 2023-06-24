@@ -1,13 +1,19 @@
 import React from 'react'
-import {Text} from 'react-native'
-import Wrapper from '../../components/Wrapper'
+import {Text, View, StyleSheet} from 'react-native'
 
 const ScreenOne = () => {
   return (
-    <Wrapper>
-      <Text>Screen ONE</Text>
-    </Wrapper>
+    <View style={styles.container}>
+      <Text>Screen One</Text>
+    </View>
   )
 }
-
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'white',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+})
 export default ScreenOne

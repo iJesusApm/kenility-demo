@@ -8,6 +8,7 @@ import ScreenTwo from '../../screens/ScreenTwo'
 import ContactScreen from '../../screens/Contact'
 
 import {SCREENS_ROUTES} from '../constants'
+import Wrapper from '../../components/Wrapper'
 
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator()
@@ -44,30 +45,33 @@ export const HomeStack = () => (
 
 export const TabNavigator = () => {
   return (
-    <Tab.Navigator
-      screenOptions={{
-        ...options,
-        tabBarStyle: {height: 60},
-        tabBarActiveTintColor: '#FC8074',
-        tabBarInactiveTintColor: '#1F1B33',
-        tabBarLabelStyle: {
-          fontSize: 16,
-        },
-      }}>
-      <Tab.Screen
-        name={SCREENS_ROUTES.HOME}
-        component={HomeStack}
-        options={{
-          tabBarIcon: () => null,
-        }}
-      />
-      <Tab.Screen
-        name={SCREENS_ROUTES.CONTACT}
-        component={ContactScreen}
-        options={{
-          tabBarIcon: () => null,
-        }}
-      />
-    </Tab.Navigator>
+    <Wrapper>
+      <Tab.Navigator
+        initialRouteName={SCREENS_ROUTES.HOME}
+        screenOptions={{
+          ...options,
+          tabBarStyle: {height: 60},
+          tabBarActiveTintColor: '#FC8074',
+          tabBarInactiveTintColor: '#1F1B33',
+          tabBarLabelStyle: {
+            fontSize: 16,
+          },
+        }}>
+        <Tab.Screen
+          name={SCREENS_ROUTES.HOME}
+          component={HomeStack}
+          options={{
+            tabBarIcon: () => null,
+          }}
+        />
+        <Tab.Screen
+          name={SCREENS_ROUTES.CONTACT}
+          component={ContactScreen}
+          options={{
+            tabBarIcon: () => null,
+          }}
+        />
+      </Tab.Navigator>
+    </Wrapper>
   )
 }

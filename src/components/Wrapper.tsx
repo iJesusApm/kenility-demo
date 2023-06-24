@@ -53,7 +53,7 @@ const Wrapper = ({children}: Props) => {
     <View style={styles.root}>
       <Drawer style={drawerContentStyle} onPress={handleDrawerPress} />
       <Animated.View style={[styles.mainContainer, screenStyle]}>
-        <SafeAreaView>
+        <SafeAreaView style={styles.root}>
           <View style={styles.header}>
             <TouchableOpacity style={styles.btn} onPress={handlePress}>
               <Icon name="menu" size={30} color="#9F9FA0" />
@@ -90,7 +90,9 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
   children: {
-    alignItems: 'center',
+    // alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
     marginTop: 40,
   },
 })
