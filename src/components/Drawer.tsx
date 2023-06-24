@@ -30,7 +30,6 @@ const Drawer = ({style, onPress}: Props) => {
   return (
     <Animated.View style={[styles.mainContainer, style]}>
       <Text style={styles.titleText}>Beka</Text>
-
       {navigationState.map(({id, label, route}) => (
         <DrawerItem
           key={id}

@@ -50,13 +50,13 @@ const Wrapper = ({children}: Props) => {
   }
 
   return (
-    <View style={styles.safeArea}>
+    <View style={styles.root}>
       <Drawer style={drawerContentStyle} onPress={handleDrawerPress} />
       <Animated.View style={[styles.mainContainer, screenStyle]}>
         <SafeAreaView>
           <View style={styles.header}>
             <TouchableOpacity style={styles.btn} onPress={handlePress}>
-              <Icon name="menu" size={24} color="#E8E5E5" />
+              <Icon name="menu" size={30} color="#9F9FA0" />
             </TouchableOpacity>
             <Text style={styles.textStyle}>Start</Text>
           </View>
@@ -68,33 +68,30 @@ const Wrapper = ({children}: Props) => {
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
+  root: {
     flex: 1,
     backgroundColor: 'white',
-    flexDirection: 'row',
   },
   mainContainer: {
     backgroundColor: 'white',
     flex: 1,
   },
   header: {
-    alignItems: 'flex-start',
     flexDirection: 'row',
     paddingTop: 24,
   },
   btn: {
-    marginHorizontal: 36,
+    marginHorizontal: 32,
   },
   textStyle: {
     color: '#9F9FA0',
     fontSize: 24,
     letterSpacing: 5,
-    lineHeight: 33,
     textTransform: 'uppercase',
   },
   children: {
-    justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 40,
   },
 })
 

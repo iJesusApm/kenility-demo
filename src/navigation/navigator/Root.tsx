@@ -18,27 +18,56 @@ const options = {
 
 export const HomeStack = () => (
   <Stack.Navigator initialRouteName={SCREENS_ROUTES.HOME} screenOptions={options}>
-    <Stack.Screen name={SCREENS_ROUTES.HOME} component={HomeScreen} />
-    <Stack.Screen name={SCREENS_ROUTES.SCREEN_ONE} component={ScreenOne} />
-    <Stack.Screen name={SCREENS_ROUTES.SCREEN_TWO} component={ScreenTwo} />
+    <Stack.Screen
+      name={SCREENS_ROUTES.HOME}
+      component={HomeScreen}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS_ROUTES.SCREEN_ONE}
+      component={ScreenOne}
+      options={{
+        animationEnabled: false,
+      }}
+    />
+    <Stack.Screen
+      name={SCREENS_ROUTES.SCREEN_TWO}
+      component={ScreenTwo}
+      options={{
+        animationEnabled: false,
+      }}
+    />
   </Stack.Navigator>
 )
 
-export const TabNavigator = () => (
-  <Tab.Navigator screenOptions={options}>
-    <Tab.Screen
-      name={SCREENS_ROUTES.HOME}
-      component={HomeStack}
-      options={{
-        tabBarIcon: () => null, // Ocultar el icono de la pestaña
-      }}
-    />
-    <Tab.Screen
-      name={SCREENS_ROUTES.CONTACT}
-      component={ContactScreen}
-      options={{
-        tabBarIcon: () => null, // Ocultar el icono de la pestaña
-      }}
-    />
-  </Tab.Navigator>
-)
+export const TabNavigator = () => {
+  return (
+    <Tab.Navigator
+      screenOptions={{
+        ...options,
+        tabBarStyle: {height: 60},
+        tabBarActiveTintColor: '#FC8074',
+        tabBarInactiveTintColor: '#1F1B33',
+        tabBarLabelStyle: {
+          fontSize: 16,
+        },
+      }}>
+      <Tab.Screen
+        name={SCREENS_ROUTES.HOME}
+        component={HomeStack}
+        options={{
+          tabBarIcon: () => null,
+        }}
+      />
+      <Tab.Screen
+        name={SCREENS_ROUTES.CONTACT}
+        component={ContactScreen}
+        options={{
+          tabBarIcon: () => null,
+        }}
+      />
+    </Tab.Navigator>
+  )
+}
